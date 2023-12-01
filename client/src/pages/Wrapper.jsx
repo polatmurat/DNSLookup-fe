@@ -18,7 +18,7 @@ const Wrapper = ({ children }) => {
       <Sidebar side={side} closeSidebar={closeSidebar} />
       <UserNavigation openSidebar={openSidebar} />
       <section className="ml-0 sm:ml-64 min-h-screen pt-28  b-tekin">
-        <div className=" text-white p-4">{children}</div>
+        <div className="p-4">{children}</div>
       </section>
     </>
   );

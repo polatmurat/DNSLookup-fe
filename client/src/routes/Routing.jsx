@@ -9,18 +9,17 @@ import ControlPanel from "../pages/dash/ControlPanel";
 const Routing = () => {
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/login" element={<Login />}/>
-            <Route path="/register" element={<Register />}/>
-            <Route path="/dashboard" element={<Dashboard />}/>
-            <Route path="/dashboard/overview" element={<ControlPanel />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/overview" element={<ControlPanel />} />
         </Routes>
-        
-        </BrowserRouter>
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default Routing
+export default Routing;

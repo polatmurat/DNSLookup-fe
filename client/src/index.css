@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Headland+One&family=Roboto:wght@100&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +13,11 @@
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
+}
+
+.screen-header-text {
+  font-family: "Headland One", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -42,6 +49,14 @@
 }
 
 
+/* Dashboard Components */
+
+/* Control Panel */
+.control-panel__list li {
+  padding: 7px;
+}
+
+
 @layer components {
   /* Utils */
 
@@ -61,40 +76,38 @@
     @apply flex justify-center items-center w-[22px] h-[22px] rounded-full bg-indigo-600 text-xs text-white font-medium absolute -top-1 -right-3;
   }
 
-    /* Form */
+  /* Form */
 
-    .header-heading {
-        @apply text-white text-2xl capitalize font-medium;
-      }
-    
-      .heading {
-        @apply text-lg capitalize font-medium;
-      }
-      .form-label {
-        @apply block mb-1.5 text-sm font-medium capitalize text-gray-700;
-      }
-      .form-input {
-        @apply w-full border px-3 py-3 border-gray-300 rounded-md outline-none;
-      }
-      .error {
-        @apply block mt-1.5 text-rose-600 font-medium text-sm;
-      }
-      .form-control {
-        @apply w-full my-2 p-3 rounded outline-none text-gray-400 focus:ring-[3px] ring-epalette4 transition-all duration-300 placeholder:capitalize;
-      }
-      .btn-indigo {
-        @apply bg-indigo-600 w-1/4 p-3 cursor-pointer text-white rounded-lg;
-      }
-      .btn-form {
-        @apply bg-epalette2 w-1/4 p-3 cursor-pointer text-white rounded-lg;
-      }
-      .btn-dark {
-        @apply bg-epalette1 px-4 py-3 capitalize font-medium cursor-pointer;
-      }
-    
-      .btn-light {
-        @apply border-2 text-dark1 rounded-md px-4 py-3 capitalize font-medium cursor-pointer;
-      }
+  .header-heading {
+    @apply text-white text-2xl capitalize font-medium;
+  }
 
+  .heading {
+    @apply text-lg capitalize font-medium;
+  }
+  .form-label {
+    @apply block mb-1.5 text-sm font-medium capitalize text-gray-700;
+  }
+  .form-input {
+    @apply w-full border px-3 py-3 border-gray-300 rounded-md outline-none;
+  }
+  .error {
+    @apply block mt-1.5 text-rose-600 font-medium text-sm;
+  }
+  .form-control {
+    @apply w-full my-2 p-3 rounded outline-none text-gray-400 focus:ring-[3px] ring-epalette4 transition-all duration-300 placeholder:capitalize;
+  }
+  .btn-indigo {
+    @apply bg-indigo-600 w-1/4 p-3 cursor-pointer text-white rounded-lg;
+  }
+  .btn-form {
+    @apply bg-epalette2 w-1/4 p-3 cursor-pointer text-white rounded-lg;
+  }
+  .btn-dark {
+    @apply bg-epalette1 px-4 py-3 capitalize font-medium cursor-pointer;
+  }
 
+  .btn-light {
+    @apply border-2 text-dark1 rounded-md px-4 py-3 capitalize font-medium cursor-pointer;
+  }
 }
