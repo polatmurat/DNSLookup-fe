@@ -1,9 +1,11 @@
 import React from 'react';
+import Routing from './routes/Roting';
 
 const App = ()=> {
 
   return (
     <>
+      <Routing />
     </>
   )
 }

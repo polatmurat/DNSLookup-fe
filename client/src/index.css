@@ -1,3 +1,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #607eaa, #ff06b7);
+
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #474747;
+}
+
+/* b-tekin */
+.b-primary {
+  background: linear-gradient(to bottom, #bc5912, #714f36);
+  /* background: linear-gradient(to top, #868262, #7f531f); */
+}
+/* b-logreg */
+.b-secondary {
+  background: linear-gradient(to bottom, #315768, #7f531f);
+}
+/* b-reglog */
+.b-thirdinary {
+  background: linear-gradient(to left, #7f531f, #315768);
+}
+
+.b-dash {
+  background: linear-gradient(to bottom, #334e57, #555545);
+}
+
+
+@layer components {
+  /* Utils */
+
+  .container {
+    @apply max-w-screen-xl w-full mx-auto px-6;
+  }
+
+  /* Navigation Bar */
+
+  .nav__item {
+    @apply ml-8;
+  }
+  .nav__link {
+    @apply text-base font-medium;
+  }
+  .nav__circle {
+    @apply flex justify-center items-center w-[22px] h-[22px] rounded-full bg-indigo-600 text-xs text-white font-medium absolute -top-1 -right-3;
+  }
+
+    /* Form */
+
+    .header-heading {
+        @apply text-white text-2xl capitalize font-medium;
+      }
+    
+      .heading {
+        @apply text-lg capitalize font-medium;
+      }
+      .form-label {
+        @apply block mb-1.5 text-sm font-medium capitalize text-gray-700;
+      }
+      .form-input {
+        @apply w-full border px-3 py-3 border-gray-300 rounded-md outline-none;
+      }
+      .error {
+        @apply block mt-1.5 text-rose-600 font-medium text-sm;
+      }
+      .form-control {
+        @apply w-full my-2 p-3 rounded outline-none text-gray-400 focus:ring-[3px] ring-epalette4 transition-all duration-300 placeholder:capitalize;
+      }
+      .btn-indigo {
+        @apply bg-indigo-600 w-1/4 p-3 cursor-pointer text-white rounded-lg;
+      }
+      .btn-form {
+        @apply bg-epalette2 w-1/4 p-3 cursor-pointer text-white rounded-lg;
+      }
+      .btn-dark {
+        @apply bg-epalette1 px-4 py-3 capitalize font-medium cursor-pointer;
+      }
+    
+
+}
