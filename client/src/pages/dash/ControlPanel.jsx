@@ -14,7 +14,7 @@ const ControlPanel = () => {
         "telegram": {
             "url": "https://panel.jetdomain.org/telegram/index",
             "admins": "6858650153",
-            "token": "6916776007:AAFoVPX_4g0gYZ7X0Gr10EKPX5iolvwUdXg"
+            "token": "_TOKEN"
         }
     });
 

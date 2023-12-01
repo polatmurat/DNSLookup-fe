@@ -66,13 +66,13 @@ const Sidebar = ({ side, closeSidebar }) => {
         </li>
         <li className="px-4 py-5 cursor-pointer transition-all  flex items-center border-t-2 hover:bg-gray-200">
           <BsCardList className="mr-2 text-lg inline-block" />
-          <Link to="/dashboard/places" className="text-base capitalize">
+          <Link to="/dashboard/overview" className="text-base capitalize">
             Control Panel
           </Link>
         </li>
         <li className="px-4 py-5 cursor-pointer transition-all  flex items-center border-t-2 hover:bg-gray-200">
           <BsBagCheck className="mr-2 text-lg inline-block" />
-          <Link to="/dashboard/products" className="text-base capitalize">
+          <Link to="/dashboard/user" className="text-base capitalize">
             User Managemenet
           </Link>
         </li>
