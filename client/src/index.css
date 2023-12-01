@@ -92,5 +92,9 @@
         @apply bg-epalette1 px-4 py-3 capitalize font-medium cursor-pointer;
       }
     
+      .btn-light {
+        @apply border-2 text-dark1 rounded-md px-4 py-3 capitalize font-medium cursor-pointer;
+      }
+
 
 }
