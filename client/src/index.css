@@ -48,14 +48,12 @@
   background: linear-gradient(to bottom, #334e57, #555545);
 }
 
-
 /* Dashboard Components */
 
 /* Control Panel */
 .control-panel__list li {
   padding: 7px;
 }
-
 
 @layer components {
   /* Utils */
@@ -95,7 +93,7 @@
     @apply block mt-1.5 text-rose-600 font-medium text-sm;
   }
   .form-control {
-    @apply w-full my-2 p-3 rounded outline-none text-gray-400 focus:ring-[3px] ring-epalette4 transition-all duration-300 placeholder:capitalize;
+    @apply w-full my-2 p-3 ring-1 rounded outline-none text-gray-400 focus:ring-[3px] ring-epalette4 transition-all duration-300 placeholder:capitalize;
   }
   .btn-indigo {
     @apply bg-indigo-600 w-1/4 p-3 cursor-pointer text-white rounded-lg;
@@ -106,8 +104,11 @@
   .btn-dark {
     @apply bg-epalette1 px-4 py-3 capitalize font-medium cursor-pointer;
   }
-
   .btn-light {
     @apply border-2 text-dark1 rounded-md px-4 py-3 capitalize font-medium cursor-pointer;
+  }
+
+  .form-status-div {
+    @apply border border-gray-400 text-gray-400 ml-2 px-3 py-1.5 mt-2 uppercase cursor-pointer rounded text-sm;
   }
 }

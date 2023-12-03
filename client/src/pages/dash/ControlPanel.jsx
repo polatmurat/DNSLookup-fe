@@ -46,13 +46,13 @@ const ControlPanel = () => {
         <div className="p-14">
           <h1 className="text-xl border-b border-bg-800 pb-5 mb-5">System Details</h1>
           <ul className="control-panel__list">
-            <li>Version : {listData.version}</li>
-            <li>Task Endpoit : {listData.endpoit}</li>
-            <li>Task Endpoit : {listData.endpoit}</li>
-            <li>Task URL : <a href={`${listData.taskUrl}`}>{listData.taskUrl}</a></li>
-            <li>Telegram URL : <a href={`${listData.telegram.url}`}>{listData.telegram.url}</a></li>
-            <li>Telegram Admin(s) : {listData.telegram.admins}</li>
-            <li>Telegram Token : <abbr title={`${listData.telegram.token}`} className="cursor-not-allowed">Come Here</abbr></li>
+            <li><span className="font-semibold">Version : </span>{listData.version}</li>
+            <li><span className="font-semibold">Task Endpoit : </span>{listData.endpoit}</li>
+            <li><span className="font-semibold">Task Endpoit : </span>{listData.endpoit}</li>
+            <li><span className="font-semibold">Task URL : </span><a href={`${listData.taskUrl}`} className="text-indigo-900">{listData.taskUrl}</a></li>
+            <li><span className="font-semibold">Telegram URL : </span><a href={`${listData.telegram.url}`} className="text-indigo-900">{listData.telegram.url}</a></li>
+            <li><span className="font-semibold">Telegram Admin(s) : </span>{listData.telegram.admins}</li>
+            <li><span className="font-semibold">Telegram Token : </span><abbr title={`${listData.telegram.token}`} className="cursor-not-allowed">Come Here</abbr></li>
 
           </ul>
         </div>

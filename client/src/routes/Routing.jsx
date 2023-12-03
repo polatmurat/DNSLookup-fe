@@ -6,6 +6,7 @@ import Register from "../pages/auth/Register";
 import Dashboard from "../pages/Dashboard";
 import ControlPanel from "../pages/dash/ControlPanel";
 import UserManagement from "../pages/dash/UserManagement";
+import CreateUser from "../pages/dash/CreateUser";
 
 const Routing = () => {
   return (
@@ -18,6 +19,7 @@ const Routing = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/overview" element={<ControlPanel />} />
           <Route path="/dashboard/user" element={<UserManagement />} />
+          <Route path="/dashboard/create-user" element={<CreateUser />} />
         </Routes>
       </BrowserRouter>
     </>
