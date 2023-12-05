@@ -35,6 +35,7 @@ const CreateUser = () => {
   const handlePlace = (e) => {
     const { name, value } = e.target;
 
+    
     setState({
       ...state,
       [name]: value,
