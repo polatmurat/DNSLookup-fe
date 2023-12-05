@@ -62,7 +62,6 @@ const CreateUser = () => {
   console.log(state);
   return (
     <Wrapper>
-      <Wrapper>
         <ScreenHeader>
           <Link
             to="/dashboard/user"
@@ -149,7 +148,6 @@ const CreateUser = () => {
             </div>
           </form>
         </div>
-      </Wrapper>
     </Wrapper>
   );
 };
