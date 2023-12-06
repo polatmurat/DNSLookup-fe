@@ -13,7 +13,7 @@ const Dashboard = () => {
     <Wrapper>
       <ScreenHeader>
         <Link
-          to="/dashboard/create-category"
+          to="/dashboard/create-dkg"
           className="btn-light inline-flex items-center mr-4"
         >
           <BsBox className="mr-2" />

@@ -111,4 +111,9 @@
   .form-status-div {
     @apply border border-gray-400 text-gray-400 ml-2 px-3 py-1.5 mt-2 uppercase cursor-pointer rounded text-sm;
   }
+  
+  /* Update DKG */
+  .right-heading {
+    @apply mb-2 capitalize text-base;
+  }
 }

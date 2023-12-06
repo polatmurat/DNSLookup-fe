@@ -10,6 +10,7 @@ import CreateUser from "../pages/dash/CreateUser";
 import DkgAdmin from "../pages/dash/DkgAdmin";
 import DkgControl from "../pages/dash/DkgControl";
 import DkgDetails from "../pages/dash/DkgDetails";
+import DkgCreate from "../pages/dash/DkgCreate";
 
 const Routing = () => {
   return (
@@ -26,6 +27,7 @@ const Routing = () => {
           <Route path="/dashboard/dkg-management" element={<DkgAdmin />} />
           <Route path="/dashboard/dkg-control" element={<DkgControl />} />
           <Route path="/dashboard/domain/group-details/:id" element={<DkgDetails />} />
+          <Route path="/dashboard/create-dkg" element={<DkgCreate />} />
 
         </Routes>
       </BrowserRouter>

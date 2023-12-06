@@ -29,8 +29,8 @@ const Nav = () => {
 
             {controller ? (
               <li className="nav__item text-black">
-                <Link to="/dashboard/places" className="nav__link">
-                  {"User"}
+                <Link to="/login" className="nav__link">
+                  {"Sign In"}
                 </Link>
               </li>
             ) : (
