@@ -7,6 +7,9 @@ import Dashboard from "../pages/Dashboard";
 import ControlPanel from "../pages/dash/ControlPanel";
 import UserManagement from "../pages/dash/UserManagement";
 import CreateUser from "../pages/dash/CreateUser";
+import DkgAdmin from "../pages/dash/DkgAdmin";
+import DkgControl from "../pages/dash/DkgControl";
+import DkgDetails from "../pages/dash/DkgDetails";
 
 const Routing = () => {
   return (
@@ -20,6 +23,10 @@ const Routing = () => {
           <Route path="/dashboard/overview" element={<ControlPanel />} />
           <Route path="/dashboard/user" element={<UserManagement />} />
           <Route path="/dashboard/create-user" element={<CreateUser />} />
+          <Route path="/dashboard/dkg-management" element={<DkgAdmin />} />
+          <Route path="/dashboard/dkg-control" element={<DkgControl />} />
+          <Route path="/dashboard/domain/group-details/:id" element={<DkgDetails />} />
+
         </Routes>
       </BrowserRouter>
     </>

@@ -30,12 +30,12 @@ const CreateUser = () => {
     name: "",
     role: "",
     status: "",
+    email: "",
   });
 
   const handlePlace = (e) => {
     const { name, value } = e.target;
 
-    
     setState({
       ...state,
       [name]: value,
@@ -50,12 +50,11 @@ const CreateUser = () => {
   const chooseStatus = (statusObject) => {
     setState({
       ...state,
-      status: statusObject.name,
+      status: statusObject,
     });
 
-    // Diğer işlemler devam edebilir
     const filtered = data.status.filter(
-      (status) => status.name !== statusObject.name
+      (status) => status.name !== statusObject
     );
     setStatusList([...filtered, statusObject]);
   };
@@ -63,92 +62,114 @@ const CreateUser = () => {
   console.log(state);
   return (
     <Wrapper>
-        <ScreenHeader>
-          <Link
-            to="/dashboard/user"
-            className="btn-light inline-flex items-center"
-          >
-            <BsArrowLeft className="mr-2" />
-            User List
-          </Link>
-        </ScreenHeader>
-        <Toaster position="top-right" reverseOrder />
-        <div className="flex flex-wrap -mx-3">
-          <form className="w-full xl:w-8/12 p-3" onSubmit={createUser}>
-            <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 p-3">
-                <label htmlFor="name" className="input-label">
-                  User Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  className="form-control"
-                  placeholder="User Name..."
-                  onChange={handlePlace}
-                  value={state.name}
-                  required
-                />
-              </div>
-              <div className="w-full md:w-6/12 p-3">
-                <label htmlFor="category" className="input-label">
-                  Role
-                </label>
-                {!isFetching ? (
-                  data.roles.length > 0 && (
-                    <select
-                      name="role"
-                      id="role"
-                      className="form-control capitalize"
-                      onChange={handlePlace}
-                      value={state.role}
-                    >
-                      <option value="">Choose Role...</option>
-                      {data?.roles?.map((role) => (
-                        <option
-                          value={role.name}
-                          key={role.role_id}
-                          className="capitalize"
-                        >
-                          {role.name}
-                        </option>
-                      ))}
-                    </select>
-                  )
-                ) : (
-                  <Spinner />
-                )}
-              </div>
-              <div className="w-full p-3">
-                <label className="input-label" htmlFor="status">
-                  Choose Status
-                </label>
-                {data.status.length > 0 && (
-                  <div className="flex flex-wrap -mx-3">
-                    {data.status.map((status) => (
-                      <div
-                        key={status.name}
-                        onClick={() => chooseStatus(status)}
-                        className="form-status-div"
-                      >
-                        {status.name}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div className="w-full p-3">
-                <input
-                  type="submit"
-                  value={response.isLoading ? "Loading..." : "Save Place"}
-                  disabled={response.isLoading}
-                  className="btn-light py-2 -ml-3 my-2"
-                />
-              </div>
+      <ScreenHeader>
+        <Link
+          to="/dashboard/user"
+          className="btn-light inline-flex items-center"
+        >
+          <BsArrowLeft className="mr-2" />
+          User List
+        </Link>
+      </ScreenHeader>
+      <Toaster position="top-right" reverseOrder />
+      <div className="flex flex-wrap -mx-3">
+        <form className="w-full xl:w-8/12 p-3" onSubmit={createUser}>
+          <div className="flex flex-wrap">
+            <div className="w-full md:w-6/12 p-3">
+              <label htmlFor="name" className="input-label">
+                User Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="form-control"
+                placeholder="User Name..."
+                onChange={handlePlace}
+                value={state.name}
+                required
+              />
             </div>
-          </form>
-        </div>
+            <div className="w-full md:w-6/12 p-3">
+              <label htmlFor="category" className="input-label">
+                Role
+              </label>
+              {!isFetching ? (
+                data.roles.length > 0 && (
+                  <select
+                    name="role"
+                    id="role"
+                    className="form-control capitalize"
+                    onChange={handlePlace}
+                    value={state.role}
+                  >
+                    <option value="">Choose Role...</option>
+                    {data?.roles?.map((role) => (
+                      <option
+                        value={role.name}
+                        key={role.role_id}
+                        className="capitalize"
+                      >
+                        {role.name}
+                      </option>
+                    ))}
+                  </select>
+                )
+              ) : (
+                <Spinner />
+              )}
+            </div>
+            <div className="w-full md:w-6/12 p-3">
+              <label htmlFor="email" className="input-label">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="form-control"
+                placeholder="Email..."
+                onChange={handlePlace}
+                value={state.email}
+                required
+              />
+            </div>
+            <div className="w-full md:w-6/12 p-3">
+              <label className="input-label" htmlFor="status">
+                Choose Status
+              </label>
+              {data.status.length > 0 && (
+                <div className="flex flex-wrap -mx-3 mt-2">
+                  <div
+                    onClick={() => chooseStatus("active")}
+                    className={`form-status-div transition-colors ${
+                      state.status === "active" ? "text-green-500" : ""
+                    }`}
+                  >
+                    Active
+                  </div>
+                  <div
+                    onClick={() => chooseStatus("passive")}
+                    className={`form-status-div ${
+                      state.status === "passive" ? "text-red-500" : ""
+                    }`}
+                  >
+                    Passive
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="w-full ml-3 p-3">
+              <input
+                type="submit"
+                value={response.isLoading ? "Loading..." : "Create User"}
+                disabled={response.isLoading}
+                className="btn-light py-2 -ml-3 my-2"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
     </Wrapper>
   );
 };
