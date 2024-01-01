@@ -11,6 +11,7 @@ import DkgAdmin from "../pages/dash/DkgAdmin";
 import DkgControl from "../pages/dash/DkgControl";
 import DkgDetails from "../pages/dash/DkgDetails";
 import DkgCreate from "../pages/dash/DkgCreate";
+import DndExample from "../pages/dash/DndExample";
 
 const Routing = () => {
   return (
@@ -18,6 +19,7 @@ const Routing = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/dndexample" element={<DndExample />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
